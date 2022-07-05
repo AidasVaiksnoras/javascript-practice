@@ -14,8 +14,22 @@
 4. Atspausdinkite rezultata html elemente.
 */
 
-const kvadLeft = 30;
-const kvadTop = 30;
+let x = 30;
+let y = 30;
 
-document.querySelector(`div`).style.left = kvadLeft + `px`;
-document.querySelector(`div`).style.top = kvadTop + `px`;
+document.addEventListener("keydown", move);
+
+function move(event) {
+  if (event.key == "ArrowDown") {
+    y += 1;
+  } else if (event.key == "ArrowUp") {
+    y -= 1;
+  } else if (event.key == "ArrowRight") {
+    x += 1;
+  } else if (event.key == "ArrowLeft") {
+    x -= 1;
+  }
+  document.querySelector(`div`).style.left = x + `px`;
+  document.querySelector(`div`).style.top = y + `px`;
+  console.log(event);
+}
