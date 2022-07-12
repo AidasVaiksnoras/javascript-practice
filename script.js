@@ -17,30 +17,36 @@
 let x = 30;
 let y = 30;
 let speed = 5;
-document.addEventListener("keydown", move);
+document.addEventListener('keydown', move);
 
 function move(event) {
-  if (event.key == "ArrowDown") {
+  if (event.key == 'ArrowDown') {
     y += speed;
-  } else if (event.key == "ArrowUp") {
+  } else if (event.key == 'ArrowUp') {
     y -= speed;
-  } else if (event.key == "ArrowRight") {
+  } else if (event.key == 'ArrowRight') {
     x += speed;
-  } else if (event.key == "ArrowLeft") {
+  } else if (event.key == 'ArrowLeft') {
     x -= speed;
   }
   document.querySelector(`div`).style.left = x + `px`;
   document.querySelector(`div`).style.top = y + `px`;
   console.log(event);
 }
-let element1 = document.createElement("div");
 
-element1.style.height = "20px";
-element1.style.width = "20px";
-element1.style.backgroundColor = "yellow";
-element1.style.position = "absolute";
-element1.style.top = "40px";
-element1.style.left = "40px";
+function createFoodElement(x, y) {
+  let element = document.createElement('div');
 
-document.body.append(element1);
+  element.style.height = '20px';
+  element.style.width = '20px';
+  element.style.backgroundColor = 'yellow';
+  element.style.position = 'absolute';
+  element.style.top = x + 'px';
+  element.style.left = y + 'px';
 
+  document.body.append(element);
+}
+
+createFoodElement(40, 40);
+createFoodElement(200, 200);
+createFoodElement(400, 600);
