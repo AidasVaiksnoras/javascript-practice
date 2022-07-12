@@ -16,18 +16,18 @@
 
 let x = 30;
 let y = 30;
-
+let speed = 5;
 document.addEventListener("keydown", move);
 
 function move(event) {
   if (event.key == "ArrowDown") {
-    y += 1;
+    y += speed;
   } else if (event.key == "ArrowUp") {
-    y -= 1;
+    y -= speed;
   } else if (event.key == "ArrowRight") {
-    x += 1;
+    x += speed;
   } else if (event.key == "ArrowLeft") {
-    x -= 1;
+    x -= speed;
   }
   document.querySelector(`div`).style.left = x + `px`;
   document.querySelector(`div`).style.top = y + `px`;
