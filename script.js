@@ -33,3 +33,14 @@ function move(event) {
   document.querySelector(`div`).style.top = y + `px`;
   console.log(event);
 }
+let element1 = document.createElement("div");
+
+element1.style.height = "20px";
+element1.style.width = "20px";
+element1.style.backgroundColor = "yellow";
+element1.style.position = "absolute";
+element1.style.top = "40px";
+element1.style.left = "40px";
+
+document.body.append(element1);
+
