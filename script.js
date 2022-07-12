@@ -47,6 +47,8 @@ function createFoodElement(x, y) {
   document.body.append(element);
 }
 
-createFoodElement(40, 40);
-createFoodElement(200, 200);
-createFoodElement(400, 600);
+for (let i = 1; i < 4; i++) {
+  let xx = Math.floor(Math.random() * (window.innerWidth - 15));
+  let yy = Math.floor(Math.random() * (window.innerHeight - 15));
+  createFoodElement(xx, yy);
+}
