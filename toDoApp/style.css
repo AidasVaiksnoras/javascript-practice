@@ -1,0 +1,22 @@
+#container {
+    width: 500px;
+
+}
+#to-do-header {
+    width: 100%;
+    background-color: rgb(255, 236, 125);
+    text-align: center;
+    padding: 10px;
+}
+
+.to-do-item, #input-field {
+    background-color: rgb(238, 201, 157);
+    padding: 10px;
+    width: 100%;
+}
+#input-field {
+    margin: 0;
+    border-style: none;
+    width: 100%;
+    padding: 10px;
+}
