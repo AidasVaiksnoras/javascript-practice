@@ -23,17 +23,23 @@ class Item {
     document.getElementById(`toDoContainer`).append(divItem);
   }
 }
-document.getElementById('input-field').addEventListener('keydown', (e) => {
-  if (e.code === 'Enter') {
-    const elem = e.target.value;
 
-    console.log(e.code);
-    const newItem = new Item(elem, lastIndex++);
+class TodoControler {
+  constructor() {
+    this.items = []
+    this.lastIndex = 0
+    document.getElementById('input-field').addEventListener('keydown', (e) => {
+      if (e.code === 'Enter') {
+        const elem = e.target.value;
+        const newItem = new Item(elem, this.lastIndex++);
+        document.getElementById('input-field').value = ''
+        this.items.push(newItem);
+      }
+    });
+
   }
-});
-const arr = [];
-let lastIndex = 0;
+}
 
-new Item(`isiusti laiska`, lastIndex++);
+new TodoControler();
 
-new Item(`pavalgyti`, lastIndex++);
+
