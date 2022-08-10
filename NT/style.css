@@ -1,0 +1,73 @@
+header {
+  margin: 0 auto;
+  background-color: aquamarine;
+  height: 200px;
+  padding-top: 50px;
+}
+
+header h1,
+header h2 {
+  color: white;
+  padding-left: 20%;
+}
+
+.buttons,
+p {
+  padding-left: 20%;
+}
+
+.navigation {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.card-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  box-shadow: 5px 5px 10px;
+  width: 250px;
+}
+
+.card p {
+  margin: 0px;
+  padding: 0px;
+}
+.img img {
+  width: 100%;
+}
+.price {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-footer {
+  padding: 10px;
+}
+
+.primary-btn {
+  background-color: aquamarine;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.secondary-btn {
+  background-color: white;
+  border: 1px solid grey;
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.active-btn {
+  color: aquamarine;
+  border-color: aquamarine;
+}
