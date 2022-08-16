@@ -1,10 +1,34 @@
-const state = { properties: [] };
+const state = { properties: [], btn1: 1, btn2: 1, btn3: 1 };
 fetch("https://robust-safe-crafter.glitch.me/")
   .then((Response) => Response.json())
   .then((data) => {
     drawCards(data);
     state.properties = data;
   });
+
+function setButtons(_btn1, _btn2, _btn3) {
+  state.btn1 *= _btn1;
+  state.btn2 *= _btn2;
+  state.btn3 *= _btn3;
+  document.getElementById("Vno").className =
+    state.btn1 == 1 ? "secondary-btn active-btn" : "secondary-btn";
+  document.getElementById("Kun").className =
+    state.btn2 == 1 ? "secondary-btn active-btn" : "secondary-btn";
+  document.getElementById("Klp").className =
+    state.btn3 == 1 ? "secondary-btn active-btn" : "secondary-btn";
+  filterData();
+}
+
+function filterData() {
+  const FilterProperties = state.properties.filter(
+    (element) =>
+      (element.city === "Vilnius" && state.btn1 == 1) ||
+      (element.city === "Kaunas" && state.btn2 == 1) ||
+      (element.city === "Klaipeda" && state.btn3 == 1)
+  );
+  drawCards(FilterProperties);
+}
+
 function drawCards(properties) {
   const cardWrapper = document.querySelector(".card-wrapper");
   cardWrapper.innerHTML = "";
@@ -33,9 +57,3 @@ function drawCards(properties) {
     cardImg.src = element.image;
   });
 }
-document.getElementById("Vno").addEventListener("click", (e) => {
-  const FilterProperties = state.properties.filter(
-    (element) => element.city === "Vilnius"
-  );
-  drawCards(FilterProperties);
-});

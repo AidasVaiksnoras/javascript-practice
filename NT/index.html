@@ -23,9 +23,27 @@
     <p>Filter :</p>
     <section class="navigation">
       <div class="buttons">
-        <button id="Vno" class="secondary-btn active-btn">Vilnius</button>
-        <button class="secondary-btn">Kaunas</button>
-        <button class="secondary-btn">Klaipeda</button>
+        <button
+          id="Vno"
+          class="secondary-btn active-btn"
+          onclick="setButtons(-1, 1, 1)"
+        >
+          Vilnius
+        </button>
+        <button
+          id="Kun"
+          class="secondary-btn active-btn"
+          onclick="setButtons(1, -1, 1)"
+        >
+          Kaunas
+        </button>
+        <button
+          id="Klp"
+          class="secondary-btn active-btn"
+          onclick="setButtons(1, 1, -1)"
+        >
+          Klaipeda
+        </button>
       </div>
       <div class="buttons">
         <button class="primary-btn">Add property +</button>
