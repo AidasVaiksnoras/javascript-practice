@@ -13,6 +13,7 @@
     />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="add.js" defer></script>
   </head>
 
   <header>
@@ -22,16 +23,16 @@
   <body>
     <form action=" ">
       <label for=" "> Img </label>
-      <input type="text" />
+      <input id="img" type="text" />
 
       <label for=" "> Price : </label>
-      <input type="text" />
+      <input id="price" type="text" />
 
       <label for=" "> Description : </label>
 
-      <textarea
+      <textarea 
         name="description"
-        id="des"
+        id="description"
         cols="120"
         rows="10"
         placeholder="anything you would like to say ?"
@@ -39,10 +40,10 @@
       </textarea>
 
       <label for=" "> City : </label>
-      <select name="" id="city">
-        <option value="">Vilnius</option>
-        <option value="">Kaunas</option>
-        <option value="">Klaipėda</option>
+      <select  id="city">
+        <option value="Vilnius"> Vilnius </option>
+        <option value="Kaunas"> Kaunas </option>
+        <option value="Klaipėda"> Klaipėda </option>
       </select>
 
       <button class="primary-btn" id="addBtn" type="submit">Add propert</button>
