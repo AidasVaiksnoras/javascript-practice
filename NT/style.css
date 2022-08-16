@@ -73,3 +73,21 @@ p {
   color: aquamarine;
   border-color: aquamarine;
 }
+
+label {
+  display: block;
+}
+
+form {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+#addBtn {
+  display: block;
+}
+
+textarea,
+input {
+  width: 100%;
+}
