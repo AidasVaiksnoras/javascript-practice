@@ -1,8 +1,56 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 .card {
-  border: 2px solid black;
+  border: 2px solid #eee;
   width: 200px;
   text-align: center;
+  padding: 20px;
+}
+.card button {
+  margin-top: 10px;
+  background: none;
+  border-color: #eee;
+  padding: 10px 30px;
 }
 input {
   display: block;
+  width: 80%;
+  padding: 1rem;
+  margin: 10px 0;
+}
+#addProduct {
+  padding: 10px;
+  width: 150px;
+  background: none;
+  border-color: #eee;
+  border-radius: 2px;
+}
+.price {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  border: 2px solid #eee;
+  padding: 5px;
+  text-decoration: none;
+}
+a:hover {
+  background-color: red;
 }
