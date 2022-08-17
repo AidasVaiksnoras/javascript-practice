@@ -18,8 +18,16 @@ function renderData(products) {
     title.textContent = product.title;
     price.textContent = product.price;
     button.textContent = "Istrinti";
-
+    button.id = product.id;
+    button.addEventListener("click", eraseItem);
     cards.append(card);
     card.append(img, title, price, button);
   });
+  function eraseItem(e) {
+    fetch("https://golden-whispering-show.glitch.me/" + e.target.id, {
+      method: "delete",
+    })
+    .then(()=>window.location.reload());
+   
+  }
 }
