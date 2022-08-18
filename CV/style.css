@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(152, 150, 150);
+  display: flex;
+}
+.person-container {
+  background-color: teal;
+  border-radius: 10px;
+  flex: 1;
+  padding: 15px;
+}
+.experience-container {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  flex: 2;
+  padding: 15px;
+}
+.experience-block {
+  display: flex;
+  flex-direction: column;
+}
+.experience-row {
+  display: flex;
+}
+.year {
+  flex: 1;
+}
+.description {
+  flex: 2;
+}
