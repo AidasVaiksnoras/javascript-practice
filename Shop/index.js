@@ -14,9 +14,10 @@ function renderData(products) {
     const price = document.createElement("div");
     const button = document.createElement("button");
     card.setAttribute("class", "card");
+    price.className = "price";
     img.src = product.image;
     title.textContent = product.title;
-    price.textContent = product.price;
+    price.textContent = "\u20AC" + product.price;
     button.textContent = "Istrinti";
     button.id = product.id;
     button.addEventListener("click", eraseItem);
@@ -26,8 +27,6 @@ function renderData(products) {
   function eraseItem(e) {
     fetch("https://golden-whispering-show.glitch.me/" + e.target.id, {
       method: "delete",
-    })
-    .then(()=>window.location.reload());
-   
+    }).then(() => window.location.reload());
   }
 }

@@ -8,12 +8,18 @@
     <title>Document</title>
   </head>
   <body>
+    <nav>
+      <li><a href="index.html" id="firstPage">Index</a></li>
+      <li>
+        <a href="addItems.html" id="nextPage">Add items</a>
+      </li>
+    </nav>
     <script src="add.js" defer></script>
     <h1>Pridėti prekę</h1>
     <form id="itemForm">
       <input type="text" id="img" placeholder="Add image" />
       <input type="text" id="title" placeholder="title" />
-      <input type="number" id="price" placeholder="price" />
+      <input type="number" id="price" step=".01" placeholder="price" />
       <button type="submit" id="addProduct">Add product</button>
     </form>
   </body>
